@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: crud-app
-        image: idobaram/crud-app
+        image: idobaram/crud-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8181
