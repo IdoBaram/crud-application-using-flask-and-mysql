@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crud-app-mysql
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: crud-app-mysql
+  template:
+    metadata:
+      labels:
+        app: crud-app-mysql
+    spec:
+      containers:
+      - name: crud-app-mysql
+        image: idobaram/crud-app-mysql
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3306
